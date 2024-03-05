@@ -1,0 +1,21 @@
+{{#each products}}
+<div>
+    <h3>{{this.title}}</h3>
+    <ul>
+        <li>ASIN: {{this.asin}}</li>
+        <li>Image URL: {{this.imgUrl}}</li>
+        <li>Stars: {{this.stars}}</li>
+        <li>Reviews: {{this.reviews}}</li>
+        <li>Price: {{this.price}}</li>
+        <li>List Price: {{this.listPrice}}</li>
+        <li>Category Name: {{this.categoryName}}</li>
+        <li>Is Best Seller: {{this.isBestSeller}}</li>
+        <li>Bought In Last Month: {{this.boughtInLastMonth}}</li>
+    </ul>
+</div>
+{{/each}}
+{{#if data.length}}
+<!-- If there are no results, you can display a message here -->
+{{else}}
+<p>No matching products found.</p>
+{{/if}}

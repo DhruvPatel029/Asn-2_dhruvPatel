@@ -1,0 +1,24 @@
+<table border="1" style="border-collapse: collapse;">
+    <tr>
+        {{!-- <th>ASIN</th> --}}
+        <th>Title</th>
+        {{!-- <th>Image URL</th>
+        <th>Stars</th> --}}
+        <th>Review</th>
+
+    </tr>
+    {{#each products}}
+    <tr class="{{#if (eq this.reviews 0)}}highlight{{/if}}">
+        {{!-- <td>{{this.asin}}</td> --}}
+        <td>{{this.title}}</td>
+        {{!-- <td>{{this.imgUrl}}</td>
+        <td>{{this.stars}}</td> --}}
+        <td>{{replaceZeroWithNA this.reviews}}</td>
+        {{!-- <td>{{this.price}}</td>
+        <td>{{this.listPrice}}</td>
+        <td>{{this.categoryName}}</td>
+        <td>{{this.isBestSeller}}</td>
+        <td>{{this.boughtInLastMonth}}</td> --}}
+    </tr>
+    {{/each}}
+</table>
